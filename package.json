@@ -1,0 +1,40 @@
+{
+  "name": "auto_test_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --project=chromium",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "test:chromium": "playwright test --project=chromium",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:parallel": "playwright test --workers=4",
+    "report": "playwright show-report reports/html",
+    "allure:gen": "allure generate reports/allure-results -o reports/allure-report --clean",
+    "allure:open": "allure open reports/allure-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaozhb/auto_test_ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shaozhb/auto_test_ts/issues"
+  },
+  "homepage": "https://github.com/shaozhb/auto_test_ts#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.2",
+    "allure-playwright": "^3.12.1",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^7.0.2"
+  }
+}
